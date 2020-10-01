@@ -1,0 +1,12 @@
+{
+  "name": "scuba",
+  "displayName": "scuba",
+  "expo": {
+    "name": "scuba",
+    "slug": "scuba",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
