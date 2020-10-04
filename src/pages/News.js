@@ -20,14 +20,14 @@ export default class Newsletter extends Component {
     }
 
     AusSelected = () => {
-        if (this.state.currentWebsite == "https://www.scubadiverdestinations.com/") {
+        if (this.state.currentWebsite == "http://www.scubadiverdestinations.com/") {
             this.setState({
                 currentWebsite: "https://www.scubadivermag.com.au/",
 
             }
             )
         }
-        if (this.state.currentWebsite == "https://www.scubadivermag.com/") {
+        if (this.state.currentWebsite == "https://www.scubadivermag.com") {
 
         } else {
             this.setState({
@@ -44,7 +44,7 @@ export default class Newsletter extends Component {
     UKSelected = () => {
         if (this.state.currentWebsite == "https://www.scubadivermag.com.au/") {
             this.setState({
-                currentWebsite: "https://www.scubadiverdestinations.com/",
+                currentWebsite: "http://www.scubadiverdestinations.com/",
 
             }
             )
@@ -53,11 +53,11 @@ export default class Newsletter extends Component {
 
         } else {
             this.setState({
-                currentWebsite: "https://www.scubadiverdestinations.com/",
+                currentWebsite: "http://www.scubadiverdestinations.com/",
 
             }
             )
-        }if(this.state.currentWebsite=='https://www.scubadiverdestinations.com/'){
+        }if(this.state.currentWebsite=='http://www.scubadiverdestinations.com/'){
             Alert.alert('UK is Already Selected')
         }
     }
@@ -69,16 +69,40 @@ USSelected=()=>{
         }
         )
     }
-    if (this.state.currentWebsite == "https://www.scubadiverdestinations.com/") {
+    if (this.state.currentWebsite == "http://www.scubadiverdestinations.com/") {
 
     } else {
         this.setState({
-            currentWebsite: "https://www.scubadivermag.com/",
+            currentWebsite: "https://www.scubadivermag.com",
 
         }
         )
     }if(this.state.currentWebsite=='https://www.scubadivermag.com/'){
         Alert.alert('US is Already Selected')
+    }
+}
+HomeSelected=()=>{
+    if (this.state.currentWebsite == "https://www.scubadivermag.com.au/") {
+        this.setState({
+            currentWebsite: "https://www.scubadivermag.com.au/",
+
+        }
+        )
+    }
+    if (this.state.currentWebsite == "http://www.scubadiverdestinations.com/") {
+
+    } else {
+        this.setState({
+            currentWebsite: "http://www.scubadiverdestinations.com/",
+
+        }
+        )
+    }if(this.state.currentWebsite=='https://www.scubadivermag.com/'){
+        this.setState({
+            currentWebsite: "https://www.scubadivermag.com/",
+
+        }
+        )
     }
 }
     render() {
@@ -94,39 +118,40 @@ USSelected=()=>{
                     }}>
                     <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1, width: '95%', alignContent: "center",alignSelf:'center' }}>
 
-                        <View style={{ height: 200, width: '100%', backgroundColor: "white", width: '100%', alignItems: 'center', justifyContent: "center", alignContent: "center", }}>
+                        <View style={{ backgroundColor:'rgb(24, 96, 172)',height: 200, width: '100%', width: '100%', alignItems: 'center', justifyContent: "center", alignContent: "center", }}>
                             <View>
-                                <Text>Select Website </Text>
+                                <Text style={{fontSize:20,fontWeight:"bold",color:'white',textAlign:'center'}}>Select Website </Text>
                             </View>
                             <View style={{ alignContent: 'center', flexDirection: 'row', width: '100%', alignSelf: "center", justifyContent: "center", alignItems: "center" }}>
                                 <TouchableOpacity
+                                activeOpacity={0.7}
                                 onPress={()=>this.UKSelected()}
-                                style={{ padding: 10, margin: 5, alignSelf: 'center', marginTop: 40 }}>
+                                style={{ padding: 10, margin: 5, alignSelf: 'center', height:40,marginTop: 40,backgroundColor:'white',width:'25%' }}>
 
-                                    <Text style={{ fontSize: 15, fontWeight: 'bold', alignSelf: "center" }}>UK </Text>
+                                    <Text style={{ fontSize: 12, fontWeight: 'bold', alignSelf: "center",textAlign:"center" }}>UK </Text>
                                 </TouchableOpacity>
 
                                 <TouchableOpacity
                                 
                                 onPress={()=>this.AusSelected()}
-                                style={{  padding: 15, margin: 5,  alignSelf: 'center', marginTop: 40 }}>
+                                style={{  padding: 15, margin: 5,  alignSelf: 'center',height:40, marginTop: 40 ,backgroundColor:'white',width:'25%'}}>
 
-                                    <Text style={{ fontSize: 15, fontWeight: 'bold', alignSelf: "center" }}>Australia </Text>
+                                    <Text style={{ fontSize: 12, fontWeight: 'bold', alignSelf: "center",textAlign:'center'}}>Australia </Text>
                                 </TouchableOpacity>
 
                                 <TouchableOpacity
                                 onPress={()=>this.USSelected()}
-                                style={{  padding: 10, margin: 5, alignSelf: 'center', marginTop: 40 }}>
+                                style={{  padding: 10, margin: 5, alignSelf: 'center', marginTop: 40 ,height:40,backgroundColor:'white',width:'25%'}}>
 
-                                    <Text style={{ fontSize: 15, fontWeight: 'bold', alignSelf: "center" }}>US </Text>
+                                    <Text style={{ fontSize: 12, fontWeight: 'bold', alignSelf: "center" }}>US </Text>
                                 </TouchableOpacity>
 
                             </View>
 
                             <TouchableOpacity 
-                            style={{width:100,height:50,justifyContent:"center",alignItems:"center",}}
+                            style={{width:100,height:50,justifyContent:"center",alignItems:"center",borderWidth:1,borderColor:"white",marginTop:10}}
                             onPress={() => this.setState({ modalVisible: false })}>
-                                <Text>Close</Text>
+                                <Text style={{fontSize:15,fontWeight:'bold',textAlign:'center',color:'white'}}>Close</Text>
 
 
                             </TouchableOpacity>
@@ -141,11 +166,23 @@ USSelected=()=>{
 
                     style={{ marginTop: 20 }}
                 />
+                <View style={{backgroundColor:'rgb(24, 96, 172)',width:'100%'}}>
+
                 <TouchableOpacity
                 style={{alignSelf:'center'}}
                 onPress={() => this.setState({ modalVisible: true })}>
-                    <Text>Filter Website</Text>
+                    <Text style={{fontSize:20,fontWeight:'bold',color:"white"}}>Click Here to Select Website</Text>
                 </TouchableOpacity>
+                </View>
+                  <View style={{backgroundColor:'rgb(24, 96, 172)',width:'100%',borderWidth:1,borderColor:'white'}}>
+
+<TouchableOpacity
+onPress={()=>this.HomeSelected()}
+style={{alignSelf:'center'}}
+>
+    <Text style={{fontSize:20,fontWeight:'bold',color:"white",borderColor:'black'}}>Click Here to Go to Home Screen</Text>
+</TouchableOpacity>
+</View>
             </View>
         )
     }

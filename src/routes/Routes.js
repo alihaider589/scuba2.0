@@ -15,8 +15,10 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="News" component={News} />
+    <Tab.Navigator  tabBarOptions={{activeTintColor:'white',inactiveBackgroundColor:'rgb(24, 96, 172)',activeBackgroundColor:'rgb(24, 96, 172)',allowFontScaling:true,labelStyle:{fontSize:15,textAlign:"center",fontWeight:"bold"}}}>
+      <Tab.Screen
+      
+      name="News" component={News} />
       <Tab.Screen name="Youtube"  
       
       options={{tabBarVisible:false}}
