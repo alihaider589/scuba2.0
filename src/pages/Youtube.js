@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, StatusBar, Image, TouchableOpacity,SafeAreaView ,Dimensions} from 'react-native'
+
 import { WebView } from 'react-native-webview'
 import Header from '../components/Header'
 export default class Newsletter extends Component {
