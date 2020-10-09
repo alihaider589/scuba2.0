@@ -4,6 +4,7 @@
   "expo": {
     "name": "scuba",
     "slug": "scuba",
+    "icon": "./icon.png",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
