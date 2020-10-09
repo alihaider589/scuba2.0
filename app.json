@@ -10,10 +10,12 @@
       "**/*"
     ],
     "android": {
-      "package": "com.alihaider2929.scuba"
+      "package": "com.alihaider2929.scuba", 
+      "icon": "./icon.png"
     },
     "ios": {
-      "bundleIdentifier": "com.alihaider2929.scuba"
+      "bundleIdentifier": "com.alihaider2929.scuba",
+      "icon": "./icon.png"
     }
   }
 }
