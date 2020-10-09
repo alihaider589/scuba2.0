@@ -11,11 +11,21 @@
     ],
     "android": {
       "package": "com.alihaider2929.scuba", 
-      "icon": "./icon.png"
+      "icon": "./icon.png",
+      "splash": {
+        "image": "./splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#000000"
+      }
     },
     "ios": {
       "bundleIdentifier": "com.alihaider2929.scuba",
-      "icon": "./icon.png"
+      "icon": "./icon.png",
+      "splash": {
+        "image": "./splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#000000"
+      }
     },
     "splash": {
       "image": "./splash.png",
