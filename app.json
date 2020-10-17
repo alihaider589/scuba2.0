@@ -10,7 +10,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.alihaider2929.scuba", 
+      "package": "com.scuba", 
       "icon": "./assets/icon.png",
       "splash": {
         "image": "./assets/splash.png",
@@ -19,7 +19,7 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.alihaider2929.scuba",
+      "bundleIdentifier": "com.scuba",
       "icon": "./assets/icon.png",
       "splash": {
         "image": "./assets/splash.png",
