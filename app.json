@@ -4,34 +4,19 @@
   "expo": {
     "name": "scuba",
     "slug": "scuba",
-    "icon": "./assets/icon.png",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "android": {
-      "package": "com.alihaider2929.scuba", 
-      "icon": "./assets/icon.png",
-      "splash": {
-        "image": "./assets/splash.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#000000"
-      }
+      "package": "com.alihaider2929.scuba"
     },
     "ios": {
-      "bundleIdentifier": "com.alihaider2929.scuba",
-      "icon": "./assets/icon.png",
-      "splash": {
-        "image": "./assets/splash.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#000000"
-      }
+      "bundleIdentifier": "com.alihaider2929.scuba"
     },
+    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
     }
-    
   }
 }
