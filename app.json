@@ -4,7 +4,7 @@
   "expo": {
     "name": "scuba",
     "slug": "scuba",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "assetBundlePatterns": ["**/*"],
     "android": {
       "package": "name.scuba.org", 

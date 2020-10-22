@@ -178,25 +178,28 @@ export default class Newsletter extends Component {
                         originWhitelist={['*']}
                         source={{ uri: this.state.currentWebsite }}
 
-                        style={{ marginTop: 20 }}
+                        // style={{ marginTop: 20 }}
                     />
-                    <View style={{ backgroundColor: 'rgb(24, 96, 172)', width: '100%' }}>
 
-                        <TouchableOpacity
-                            style={{ alignSelf: 'center' }}
-                            onPress={() => this.setState({ modalVisible: true })}>
-                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: "white" }}>Click Here to Select Region</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={{ backgroundColor: 'rgb(24, 96, 172)', width: '100%', borderWidth: 1, borderColor: 'white' }}>
 
-                        <TouchableOpacity
-                            onPress={() => this.HomeSelected()}
-                            style={{ alignSelf: 'center' }}
-                        >
-                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: "white", borderColor: 'black' }}>Click Here to Go to Home Screen</Text>
-                        </TouchableOpacity>
-                    </View>
+
+<View style={{ backgroundColor: 'rgb(24, 96, 172)', width: '100%' ,flexDirection:'row',padding:5}}>
+<View style={{width:'50%',borderWidth:1,borderColor:'white',margin:2}}>
+<TouchableOpacity
+style={{ alignSelf: 'center' }}
+onPress={() => this.setState({ modalVisible: true })}>
+<Text style={{ fontSize: 20, fontWeight: 'bold', color: "white" }}>Select Region</Text>
+</TouchableOpacity>
+</View>
+<View style={{width:'50%',borderWidth:1,borderColor:'white',margin:2}}>
+<TouchableOpacity
+onPress={() => this.setState({currentWebsite:"http://www.scubadiverdestinations.com/"})}
+style={{ alignSelf: 'center' }}
+>
+<Text style={{ fontSize: 20, fontWeight: 'bold', color: "white", borderColor: 'black' }}>Home Screen</Text>
+</TouchableOpacity>
+</View>
+</View>
                 </View>
             </SafeAreaView>
         )
@@ -207,6 +210,36 @@ export default class Newsletter extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: StatusBar.currentHeight
+        // marginTop: StatusBar.currentHeight
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    //  <View style={{ backgroundColor: 'rgb(24, 96, 172)', width: '100%' }}>
+
+                    //     <TouchableOpacity
+                    //         style={{ alignSelf: 'center' }}
+                    //         onPress={() => this.setState({ modalVisible: true })}>
+                    //         <Text style={{ fontSize: 20, fontWeight: 'bold', color: "white" }}>Select Region</Text>
+                    //     </TouchableOpacity>
+                    // </View>
+                    // <View style={{ backgroundColor: 'rgb(24, 96, 172)', width: '100%', borderWidth: 1, borderColor: 'white' }}>
+
+                    //     <TouchableOpacity
+                    //         onPress={() => this.HomeSelected()}
+                    //         style={{ alignSelf: 'center' }}
+                    //     >
+                    //         <Text style={{ fontSize: 20, fontWeight: 'bold', color: "white", borderColor: 'black' }}>Home Screen</Text>
+                    //     </TouchableOpacity>
+                    // </View>
